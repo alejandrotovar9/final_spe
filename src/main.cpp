@@ -46,8 +46,6 @@ void resetButtons() {
   
   digitalWrite(led1Pin, HIGH);
   digitalWrite(led2Pin, HIGH);
-
-  //digitalWrite(resetButtonPin, LOW);
   
   pollingForPresses = 1;
 }
@@ -152,19 +150,6 @@ void loop() {
     if (pollingForPresses==0) {
 
       timer();
-
-      /*
-      if (readingReset != resetButtonState && readingReset != lastResetState) {
-              resetButtonState = digitalRead(resetButtonPin);
-          
-              if (resetButtonState == HIGH) {
-                Serial.print("Reset button HIGH \n");
-                resetButtons();
-              }
-         
-         resetButtonState = 0;
-      }
-      */
     }
 
   //lastResetState = readingReset;
